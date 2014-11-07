@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>NzbDrone</Name>
+  <Description>
+    NZBDrone is a PVR for newsgroup users. It can monitor multiple RSS feeds for new episodes of your favourite shows and will grab, sorts and renames them. It can also be configured to automatically upgrade the quality of files already downloaded if a better quality format becomes available.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/config[/b] : set this path to where you wish NzbDrone to store it's configuration.[br]
+    [b]/mnt[/b] : this path is used to retrieve the downloaded files and deliver the processed files.[br]
+  </Description>
+  <Registry>https://registry.hub.docker.com/u/hurricane/docker-nzbdrone/</Registry>
+  <GitHub>https://github.com/hurricanehernandez/docker-nzbdrone</GitHub>
+  <Repository>hurricane/docker-nzbdrone</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8082</HostPort>
+        <ContainerPort>8082</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/opt/appdata/nzbdrone/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt</HostDir>
+      <ContainerDir>/mnt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8082]/</WebUI>
+  <Banner>http://i.imgur.com/rsb80Zk.png</Banner>
+  <Icon>http://i.imgur.com/CIXYh6A.png</Icon>
+</Container>
