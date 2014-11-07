@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>SABnzbd</Name>
+  <Description>
+    SABnzbd is an Open Source Binary Newsreader written in Python. SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/config[/b] : this path is where SABnzbd store it's configuration.[br]
+    [b]/mnt[/b] : in this path, SABnzbd stores the downloaded files.
+    [b]/opt/tmp[/b] : in this path, SABnzbd stores temporary downloaded files.
+  </Description>
+  <Registry>https://registry.hub.docker.com/u/hurricane/docker-sabnzbd/</Registry>
+  <GitHub>https://github.com/HurricaneHernandez/docker-sabnzbd</GitHub>
+  <Repository>needo/sabnzbd</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment/>
+  <Data>
+    <Volume>
+      <HostDir>/opt/appdata/sabnzbd</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt</HostDir>
+      <ContainerDir>/mnt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/opt/tmp</HostDir>
+      <ContainerDir>/opt/tmp</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8081]/</WebUI>
+  <Banner>http://i.imgur.com/5k8nrYA.png</Banner>
+  <Icon>http://i.imgur.com/GTfJONm.png</Icon>
+</Container>
