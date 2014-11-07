@@ -10,7 +10,7 @@
   </Description>
   <Registry>https://registry.hub.docker.com/u/hurricane/docker-sabnzbd/</Registry>
   <GitHub>https://github.com/HurricaneHernandez/docker-sabnzbd</GitHub>
-  <Repository>needo/sabnzbd</Repository>
+  <Repository>hurricane/docker-sabnzbd</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
