@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>CouchPotato</Name>
+  <Description>
+    CouchPotato (CP) is an automatic NZB and torrent downloader. You can keep a "movies I want"-list and it will search for NZBs/torrents of these movies every X hours. Once a movie is found, it will send it to SABnzbd or download the torrent to a specified directory.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/config[/b] : this path is used to store the configuration and the database files of Couchpotato.[br]
+    [b]/mnt[/b] : main unRAID share path, should contain subfolder of downloads and subfolder of process files (e.g. SABnzbd or NZBGet)[br]
+  </Description>
+  <Registry>https://registry.hub.docker.com/u/hurricane/docker-couchpotato/</Registry>
+  <GitHub>https://github.com/hurricanehernandez/docker-couchpotato</GitHub>
+  <Repository>hurricane/docker-couchpotato</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8083</HostPort>
+        <ContainerPort>8083</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/opt/appdata/couchpotato</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt</HostDir>
+      <ContainerDir>/mnt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8083]/</WebUI>
+  <Banner>http://i.imgur.com/2BKYsWT.png</Banner>
+  <Icon>http://i.imgur.com/popkAe6.png</Icon>
+</Container>
