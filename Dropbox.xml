@@ -4,8 +4,8 @@
   <Description>
     Dropbox is a free service that lets you bring your photos, docs, and videos anywhere and share them easily. Never email yourself a file again![br][br]
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
-    [b]/config[/b] : in this path, Dropbox will store it's configuration files.[br]
-    [b]/home/Dropbox[/b] : in this path, Dropbox wil store the user files. [br][br]
+    [b]/config[/b]  : in this path, Dropbox will store it's configuration files.[br]
+    [b]/dropbox[/b] : in this path, Dropbox wil store the user files. [br][br]
     [b][span style='color: #E80000;']Tip:[/span][/b] If it's the first time you install this container, an authorization link will be available in the logs. Please take a look.
   </Description>
   <Registry>https://registry.hub.docker.com/u/hurricane/docker-dropbox/</Registry>
