@@ -12,7 +12,7 @@
   <GitHub>https://github.com/hurricanehernandez/docker-dropbox</GitHub>
   <Repository>hurricane/docker-dropbox</Repository>
   <BindTime>true</BindTime>
-  <Privileged>true</Privileged>
+  <Privileged>false</Privileged>
   <Environment/>
   <Networking>
     <Mode>host</Mode>
