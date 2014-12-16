@@ -7,9 +7,9 @@
     [b]/config[/b] : set this path to where you wish MediaBrowser to store it's configuration.[br]
     [b]/mnt[/b] : this path is used to add library locations to MediaBrowser.[br]
   </Description>
-  <Registry>https://registry.hub.docker.com/u/hurricane/docker-mediabrowser/</Registry>
-  <GitHub>https://github.com/hurricanehernandez/docker-mediabrowser</GitHub>
-  <Repository>hurricane/docker-mediabrowser</Repository>
+  <Registry>https://registry.hub.docker.com/u/mediabrowser/mbserver/</Registry>
+  <GitHub>https://github.com/MediaBrowser/MediaBrowser.Build/tree/master/Docker</GitHub>
+  <Repository>mediabrowser/mbserver</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment/>
