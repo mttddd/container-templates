@@ -5,8 +5,7 @@
     SABnzbd is an Open Source Binary Newsreader written in Python. SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.[br][br]
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]/config[/b] : this path is where SABnzbd store it's configuration.[br]
-    [b]/mnt[/b] : in this path, SABnzbd stores the downloaded files.
-    [b]/opt/tmp[/b] : in this path, SABnzbd stores temporary downloaded files.
+    [b]/mnt[/b] :  this path is a parent directory of where a user might configure SABnzbd to store downloaded files.
   </Description>
   <Registry>https://registry.hub.docker.com/u/hurricane/docker-sabnzbd/</Registry>
   <GitHub>https://github.com/HurricaneHernandez/docker-sabnzbd</GitHub>
