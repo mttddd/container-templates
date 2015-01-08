@@ -16,7 +16,16 @@
   <Repository>hurricane/docker-smuxi</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Environment/>
+  <Environment>
+    <Variable>
+      <Name>USERNAME</Name>
+      <Value>admin</Value>
+    </Variable>
+    <Variable>
+      <Name>PASSWORD</Name>
+      <Value>admin</Value>
+    </Variable>
+  </Environment>
   <Networking>
     <Mode>host</Mode>
     <Publish>
