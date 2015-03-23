@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Name>NzbDrone</Name>
+  <Name>Sonarr</Name>
   <Description>
-    NZBDrone is a PVR for newsgroup users. It can monitor multiple RSS feeds for new episodes of your favourite shows and will grab, sorts and renames them. It can also be configured to automatically upgrade the quality of files already downloaded if a better quality format becomes available.[br][br]
+    Sonarr is a PVR for newsgroup users. It can monitor multiple RSS feeds for new episodes of your favourite shows and will grab, sorts and renames them. It can also be configured to automatically upgrade the quality of files already downloaded if a better quality format becomes available.[br][br]
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]/config[/b] : set this path to where you wish NzbDrone to store it's configuration.[br]
     [b]/mnt[/b] : this path is used to retrieve the downloaded files and to deliver the processed files.[br]
@@ -14,11 +14,11 @@
   <Privileged>false</Privileged>
   <Environment/>
   <Networking>
-    <Mode>host</Mode>
+    <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8082</HostPort>
-        <ContainerPort>8082</ContainerPort>
+        <HostPort>8083</HostPort>
+        <ContainerPort>8083</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -35,7 +35,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8082]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8083]/</WebUI>
   <Banner>http://i.imgur.com/rsb80Zk.png</Banner>
   <Icon>http://i.imgur.com/CIXYh6A.png</Icon>
 </Container>
