@@ -18,7 +18,16 @@
   <Repository>hurricane/docker-subsonic</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Environment/>
+  <Environment>
+    <Variable>
+      <Name>WEB_PORT</Name>
+      <Value>4040</Value> 
+    </Variable>
+    <Variable>
+      <Name>SSL_PORT</Name>
+      <Value>0</Value> 
+    </Variable>
+  </Environment>
   <Networking>
     <Mode>host</Mode>
     <Publish>
