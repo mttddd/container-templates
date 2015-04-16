@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Name>BTSync</Name>
+  <Name>BTSyncFree</Name>
   <Description>
-    [h3]BitTorrent Sync[/h3]BitTorrent Sync, or simply - Sync - is an application for data synchronization. Its primary goal is to keep designated folder content same on 2 or more devices / computers. As soon as something changes on one computer, change (would it be changed content of a file, file renaming or deletion, etc.) should be propagated to all other computer(s) that want to keep the folder synchronized.Sync is available for a bunch of platforms, both desktop and mobile, which gives a good usage flexibility. This template will run the latest version available[br][br]
+    [h3]BitTorrent Sync[/h3]BitTorrent Sync, or simply - Sync - is an application for data synchronization. Its primary goal is to keep designated folder content same on 2 or more devices / computers. As soon as something changes on one computer, change (would it be changed content of a file, file renaming or deletion, etc.) should be propagated to all other computer(s) that want to keep the folder synchronized.Sync is available for a bunch of platforms, both desktop and mobile, which gives a good usage flexibility. This template will run the last free version of BTSync.[br][br]
     [b][span style=\'color: #E80000;\']Directions:[/span][/b][br]
     [b]/config[/b]    : this path is where Bittorrent Sync will store it\'s configuration files.
     [b]/sync[/b]      : this path is where Bittorrent Sync will share files from.
