@@ -23,7 +23,7 @@
       <Name>WEB_PORT</Name>
       <Value>8888</Value>
     </Variable>
-  <Environment/>
+  </Environment>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
