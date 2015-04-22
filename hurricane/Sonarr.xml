@@ -12,7 +12,20 @@
   <Repository>hurricane/docker-nzbdrone</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Environment/>
+  <Environment>
+    <Variable>
+      <Name>SR_PORT</Name>
+      <Value>8081</Name>
+    </Variable>
+    <Variable>
+      <Name>SR_USER_ID</Name>
+      <Value>99</Name>
+    </Variable>
+    <Variable>
+      <Name>SR_GROUP_ID</Name>
+      <Value>100</Name>
+    </Variable>
+  </Environment>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
