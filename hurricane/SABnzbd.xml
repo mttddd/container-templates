@@ -31,15 +31,15 @@
   <Environment>
     <Variable>
       <Name>SB_PORT</Name>
-      <Value>8081</Name>
+      <Value>8081</Value>
     </Variable>
     <Variable>
       <Name>SB_USER_ID</Name>
-      <Value>99</Name>
+      <Value>99</Value>
     </Variable>
     <Variable>
       <Name>SB_GROUP_ID</Name>
-      <Value>100</Name>
+      <Value>100</Value>
     </Variable>
   </Environment>
   <Data>
