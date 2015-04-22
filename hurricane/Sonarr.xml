@@ -5,7 +5,13 @@
     Sonarr is a PVR for newsgroup users. It can monitor multiple RSS feeds for new episodes of your favourite shows and will grab, sorts and renames them. It can also be configured to automatically upgrade the quality of files already downloaded if a better quality format becomes available.[br][br]
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]/config[/b] : set this path to where you wish NzbDrone to store it's configuration.[br]
-    [b]/mnt[/b] : this path is used to retrieve the downloaded files and to deliver the processed files.[br]
+    [b]/mnt[/b]    : this path is used to retrieve the downloaded files and to deliver the processed files.[br]
+
+    Optional Environment Variables:[br]
+    [b]SR_PORT[/b]     : this is the HTTP port for Sonarr, default value is 8083, useful if running host networking, otherwise port can be mapped to a specific port on the host. [br]
+    [b]SR_USER_ID[/b]  : this is the UID that will own the Sonarr process. [br]
+    [b]SR_GROUP_ID[/b] : this is the GID that will own the Sonarr process. [br]
+    [span style=\'color: #E80000;\']If changing SSL_PORT and WEB_PORT values please ensure you change the maps as well.[/span][br]
   </Description>
   <Registry>https://registry.hub.docker.com/u/hurricane/docker-nzbdrone/</Registry>
   <GitHub>https://github.com/hurricanehernandez/docker-nzbdrone</GitHub>
@@ -43,8 +49,8 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt</HostDir>
-      <ContainerDir>/mnt</ContainerDir>
+      <HostDir>/mnt/</HostDir>
+      <ContainerDir>/mnt/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>

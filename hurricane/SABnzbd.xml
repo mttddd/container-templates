@@ -6,6 +6,12 @@
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]/config[/b] : this path is where SABnzbd store it's configuration.[br]
     [b]/mnt[/b]    : this path is a parent directory of where a user might configure SABnzbd to store downloaded files.
+
+    Optional Environment Variables:[br]
+    [b]SB_PORT[/b]     : this is the HTTP port for SABnzbd, default value is 8081, useful if running host networking, otherwise port can be mapped to a specific port on the host. [br]
+    [b]SB_USER_ID[/b]  : this is the UID that will own the SABnzbd process. [br]
+    [b]SB_GROUP_ID[/b] : this is the GID that will own the SABnzbd process. [br]
+    [span style=\'color: #E80000;\']If changing SSL_PORT and WEB_PORT values please ensure you change the maps as well.[/span][br]
   </Description>
   <Registry>https://registry.hub.docker.com/u/hurricane/docker-sabnzbd/</Registry>
   <GitHub>https://github.com/HurricaneHernandez/docker-sabnzbd</GitHub>
