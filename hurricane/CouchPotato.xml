@@ -31,11 +31,11 @@
   <Environment>
     <Variable>
       <Name>CP_PORT</Name>
-      <Value>8082</Name>
+      <Value>8082</Value>
     </Variable>
     <Variable>
       <Name>CP_USER_ID</Name>
-      <Value>99</Name>
+      <Value>99</Value>
     </Variable>
     <Variable>
       <Name>CP_GROUP_ID</Name>
