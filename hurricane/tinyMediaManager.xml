@@ -8,7 +8,7 @@
 
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
     [b]/config[/b]   : set this path to where you wish tinyMediaManager to store it's configuration.[br]
-    [b]/mnt[/b]    : set this path to where you wish tinyMediaManager to search for media.[br]
+    [b]/mnt[/b]      : set this path to where you wish tinyMediaManager to search for media.[br]
   </Description>
   <Registry>https://registry.hub.docker.com/u/hurricane/tinymediamanager</Registry>
   <GitHub>https://github.com/HurricaneHernandez/tmm.git</GitHub>
@@ -21,7 +21,7 @@
     <Publish>
       <Port>
         <HostPort>8088</HostPort>
-        <ContainerPort>6080</ContainerPort>
+        <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -38,7 +38,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8088]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8088]/#/client/c/tinyMediaManager</WebUI>
   <Banner>http://i.imgur.com/w5HBV2W.png</Banner>
   <Icon>http://i.imgur.com/o9leX9c.png</Icon>
 </Container>
