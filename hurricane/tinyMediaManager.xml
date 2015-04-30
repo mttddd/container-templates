@@ -20,7 +20,7 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8088</HostPort>
+        <HostPort>8080</HostPort>
         <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -38,7 +38,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8088]/#/client/c/tinyMediaManager</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]/#/client/c/tinyMediaManager</WebUI>
   <Banner>http://i.imgur.com/w5HBV2W.png</Banner>
   <Icon>http://i.imgur.com/o9leX9c.png</Icon>
 </Container>
