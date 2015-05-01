@@ -21,7 +21,7 @@
   <Environment>
     <Variable>
       <Name>SR_PORT</Name>
-      <Value>8081</Value>
+      <Value>8083</Value>
     </Variable>
     <Variable>
       <Name>SR_USER_ID</Name>
