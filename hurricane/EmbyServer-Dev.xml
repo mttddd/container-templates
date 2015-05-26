@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Beta>False</Beta>
+  <Beta>True</Beta>
   <Category>MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
-  <Name>EmbyServer</Name>
+  <Name>EmbyServer-Dev</Name>
   <Description>
     Emby Server is a home media server built on top of other popular open source technologies such as Service Stack, jQuery, jQuery mobile, and Mono. Bringing together movies, music, television and more in one dazzling interface.[br][br]
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
@@ -12,7 +12,7 @@
   </Description>
   <Registry>https://registry.hub.docker.com/u/emby/embyserver/</Registry>
   <GitHub>https://github.com/MediaBrowser/Emby.Build/tree/master/emby/Docker</GitHub>
-  <Repository>emby/embyserver</Repository>
+  <Repository>emby/embyserver:dev</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment/>
