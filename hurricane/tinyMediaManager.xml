@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
+  <Beta>False</Beta>
+  <Category>MediaApp:Video</Category>
   <Name>tinyMediaManager</Name>
   <Description>
     tinyMediaManager (http://www.tinymediamanager.org) is a media management tool written in Java/Swing.[br]

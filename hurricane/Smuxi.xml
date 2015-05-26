@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
   <Name>Smuxi</Name>
+  <Beta>False</Beta>
+  <Category>Network:Messenger</Category>
   <Description>
     Smuxi is an irssi-inspired, flexible, user-friendly and cross-platform IRC client for sophisticated users.[br][br]
     Smuxi is based on the client-server model: The core application (engine) can[br]

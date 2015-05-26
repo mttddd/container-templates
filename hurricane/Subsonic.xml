@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
   <Name>Subsonic</Name>
+  <Beta>False</Beta>
+  <Category>MediaServer:Video MediaServer:Music</Category>
   <Description>
     Subsonic is an open source, web-based media server. [br][br]
 
