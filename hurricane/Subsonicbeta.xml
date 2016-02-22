@@ -22,9 +22,9 @@
     [b]MAX_MEM[/b]    : this is the numberic value for the maximum Java heap size. [br]
     [span style=\'color: #E80000;\']If changing SSL_PORT and WEB_PORT values please ensure you change the maps as well.[/span][br]
   </Description>
-  <Registry>https://registry.hub.docker.com/u/hurricane/docker-subsonic/</Registry>
-  <GitHub>https://github.com/HurricaneHernandez/docker-subsonic.git</GitHub>
-  <Repository>hurricane/docker-subsonic</Repository>
+  <Registry>https://registry.hub.docker.com/u/hurricane/subsonic/</Registry>
+  <GitHub>https://github.com/hurricanehrndz/docker-containers/tree/master/subsonic</GitHub>
+  <Repository>hurricane/subsonic</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
