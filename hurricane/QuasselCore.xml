@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>QuasselCore</Name>
+  <Beta>False</Beta>
+  <Category>Network:Messenger</Category>
+  <Description>
+    Quassel Core is a daemon/headless distributed IRC client, that supports 24/7 connectivity. [br][br]
+
+    The core maintains a persistent connection to IRC channels recording all the
+    action, while compatible clients connect/disconnect freely to the core without
+    fear of ever missing out in the conversation. This Docker image of Quassel Core
+    has been configured with PostgreSQL for better performance and scalability.
+
+
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/config[/b]  : set this path to where you wish Quassel Core to store it's configuration.[br]
+    [br][br]
+  </Description>
+  <Registry>https://registry.hub.docker.com/u/hurricane/quasselcore/</Registry>
+  <GitHub>https://github.com/hurricanehrndz/docker-containers/tree/master/quasselcore</GitHub>
+  <Repository>hurricane/quasselcore</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>APP_UID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>APP_GID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+     <Publish>
+      <Port>
+        <HostPort>4242</HostPort>
+        <ContainerPort>4242</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/quassel/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Banner>http://i.imgur.com/vuZVNSW.png</Banner>
+  <Icon>http://i.imgur.com/ECpYbII.png</Icon>
+</Container>
