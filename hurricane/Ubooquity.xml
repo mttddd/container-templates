@@ -46,7 +46,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8085]/admin</WebUI>
+  <WebUI>http://[IP]:[PORT:2202]/admin</WebUI>
   <Banner>http://i.imgur.com/InPPMtr.png</Banner>
   <Icon>http://i.imgur.com/RCyKDsT.png</Icon>
 </Container>
