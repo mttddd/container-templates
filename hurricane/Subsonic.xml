@@ -11,33 +11,34 @@
     Subsonic also supports on-the-fly media conversion (through the use of plugins) of most popular media formats, including WMA, FLAC, and more.[br][br]
 
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
-    [b]/subsonic[/b] : set this path to where you wish Subsonic to store it's configuration.[br]
-    [b]/music[/b]    : set this path to where you wish Subsonic to search for music.[br]
-    [b]/podcasts[/b] : set this path to where you wish Subsonic to store and share podcasts from.[br]
+    [b]/subsonic[/b]  : set this path to where you wish Subsonic to store it's configuration.[br]
+    [b]/music[/b]     : set this path to where you wish Subsonic to search for music.[br]
+    [b]/podcasts[/b]  : set this path to where you wish Subsonic to store and share podcasts from.[br]
+    [b]/playlists[/b] : set this path to where you wish Subsonic to store and share playlists from.[br]
     [br][br]
     Optional Environment Variables:[br]
-    [b]SSL_PORT[/b]  : this is the HTTPS port for Subsonic, if set HTTP is disabled not matter its value. [br]
-    [b]WEB_PORT[/b]  : this is the HTTP port for Subsonic, its only effective if SSL_PORT is set to 0. [br]
-    [b]MAX_MEM[/b]   : this is the numberic value for the maximum Java heap size. [br]
+    [b]HTTPS_PORT[/b] : this is the HTTPS port for Subsonic, if set HTTP is disabled not matter its value. [br]
+    [b]HTTP_PORT[/b]  : this is the HTTP port for Subsonic, its only effective if SSL_PORT is set to 0. [br]
+    [b]MAX_MEM[/b]    : this is the numberic value for the maximum Java heap size. [br]
     [span style=\'color: #E80000;\']If changing SSL_PORT and WEB_PORT values please ensure you change the maps as well.[/span][br]
   </Description>
-  <Registry>https://registry.hub.docker.com/u/hurricane/docker-subsonic/</Registry>
-  <GitHub>https://github.com/HurricaneHernandez/docker-subsonic.git</GitHub>
-  <Repository>hurricane/docker-subsonic</Repository>
+  <Registry>https://registry.hub.docker.com/u/hurricane/subsonic/</Registry>
+  <GitHub>https://github.com/hurricanehrndz/docker-containers/tree/master/subsonic</GitHub>
+  <Repository>hurricane/subsonic:stable</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
     <Variable>
-      <Name>WEB_PORT</Name>
-      <Value>4040</Value> 
+      <Name>HTTP_PORT</Name>
+      <Value>4040</Value>
     </Variable>
     <Variable>
-      <Name>SSL_PORT</Name>
-      <Value>0</Value> 
+      <Name>HTTPS_PORT</Name>
+      <Value>0</Value>
     </Variable>
     <Variable>
       <Name>MAX_MEM</Name>
-      <Value>150</Value> 
+      <Value>150</Value>
     </Variable>
   </Environment>
   <Networking>
@@ -57,18 +58,8 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/opt/appdata/subsonic/</HostDir>
+      <HostDir>/mnt/cache/appdata/subsonic/</HostDir>
       <ContainerDir>/subsonic</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/music/</HostDir>
-      <ContainerDir>/music</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/podcasts/</HostDir>
-      <ContainerDir>/podcasts</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
