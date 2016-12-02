@@ -1,62 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Container>
-  <Beta>False</Beta>
-  <Category>Downloaders:</Category>
+<Container version="2">
   <Name>Sonarr</Name>
-  <Description>
-    Sonarr is a PVR for newsgroup users. It can monitor multiple RSS feeds for new episodes of your favourite shows and will grab, sorts and renames them. It can also be configured to automatically upgrade the quality of files already downloaded if a better quality format becomes available.[br][br]
-    [b][span style='color: #E80000;']Directions:[/span][/b][br]
-    [b]/config[/b] : set this path to where you wish NzbDrone to store it's configuration.[br]
-    [b]/mnt[/b]    : this path is used to retrieve the downloaded files and to deliver the processed files.[br]
-
-    Optional Environment Variables:[br]
-    [b]SR_PORT[/b]     : this is the HTTP port for Sonarr, default value is 8083, useful if running host networking, otherwise port can be mapped to a specific port on the host. [br]
-    [b]SR_USER_ID[/b]  : this is the UID that will own the Sonarr process. [br]
-    [b]SR_GROUP_ID[/b] : this is the GID that will own the Sonarr process. [br]
-    [span style=\'color: #E80000;\']If changing SSL_PORT and WEB_PORT values please ensure you change the maps as well.[/span][br]
-  </Description>
-  <Registry>https://registry.hub.docker.com/u/hurricane/docker-nzbdrone/</Registry>
-  <GitHub>https://github.com/hurricanehernandez/docker-nzbdrone</GitHub>
-  <Repository>hurricane/docker-nzbdrone</Repository>
+  <Beta>False</Beta>
+  <Category>Downloaders: MediaApp:Video</Category>
+  <Overview>
+    Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple
+    RSS feeds for new episodes of your favorite shows and will grab, sort and
+    rename them. It can also be configured to automatically upgrade the quality
+    of files already downloaded when a better quality format becomes available.
+  </Overview>
+  <Registry>https://store.docker.com/community/images/hurricane/sonarr/</Registry>
+  <GitHub>https://github.com/hurricanehrndz/docker-containers/tree/master/sonarr</GitHub>
+  <Repository>hurricane/sonarr</Repository>
+  <Support>http://lime-technology.com/forum/index.php?topic=39286</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Environment>
-    <Variable>
-      <Name>SR_PORT</Name>
-      <Value>8083</Value>
-    </Variable>
-    <Variable>
-      <Name>SR_USER_ID</Name>
-      <Value>99</Value>
-    </Variable>
-    <Variable>
-      <Name>SR_GROUP_ID</Name>
-      <Value>100</Value>
-    </Variable>
-  </Environment>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>8083</HostPort>
-        <ContainerPort>8083</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/opt/appdata/nzbdrone/</HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/</HostDir>
-      <ContainerDir>/mnt/</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <WebUI>http://[IP]:[PORT:8083]/</WebUI>
-  <Banner>http://i.imgur.com/rsb80Zk.png</Banner>
+  <Network Default="host">bridge</Network>
+  <WebUI>http://[IP]:[PORT:8989]/</WebUI>
   <Icon>http://i.imgur.com/CIXYh6A.png</Icon>
+  <ExtraParams>--log-opt max-size=2m --log-opt max-file=1</ExtraParams>
+  <Config
+       Type="Path"
+       Name="Config directory"
+       Target="/config"
+       Default="/mnt/user/appdata/sonarr"
+       Mode="rw"
+       Description="This is where Sonarr will store it's databases and configuration."
+       Display="always"
+       Required="true">/mnt/user/appdata/sonarr</Config>
+  <Config
+       Type="Variable"
+       Name="Run as specified user"
+       Target="APP_USER"
+       Default="nobody"
+       Description="Run application with specified user name."
+       Mask="false"
+       Display="advanced"
+       Required="true">nobody</Config>
+  <Config
+       Type="Variable"
+       Name="Run with user ID"
+       Target="APP_UID"
+       Default="99"
+       Description="Run application with specified user id."
+       Mask="false"
+       Display="advanced"
+       Required="true">99</Config>
+  <Config
+       Type="Variable"
+       Name="Run with group ID"
+       Target="APP_GID"
+       Default="100"
+       Description="Run application with specified group id."
+       Mask="false"
+       Display="advanced"
+       Required="true">99</Config>
+  <Config
+       Type="Variable"
+       Name="Auto update on creation"
+       Target="EDGE"
+       Default="1"
+       Description="Update application during start-up."
+       Mask="false"
+       Display="advanced"
+       Required="true">1</Config>
+  <Config
+       Type="Variable"
+       Name="Permission mask."
+       Target="UMASK"
+       Default="002"
+       Description="Mask controlling permission of newly create files and directories."
+       Mask="false"
+       Display="advanced"
+       Required="true">002</Config>
+  <Config
+       Type="Port"
+       Name="Sonarr Web UI Port"
+       Target="8989"
+       Default="8989"
+       Mode="tcp"
+       Description="Sonarr's Web UI Port used to access and configure the service."
+       Display="always"
+       Required="true">8989</Config>
 </Container>
