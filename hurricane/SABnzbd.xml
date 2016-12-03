@@ -18,7 +18,7 @@
   <Support>http://lime-technology.com/forum/index.php?topic=39286</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Network Default="host">bridge</Network>
+  <Network>bridge</Network>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <Icon>http://i.imgur.com/GTfJONm.png</Icon>
   <ExtraParams>--log-opt max-size=2m --log-opt max-file=1</ExtraParams>
@@ -28,9 +28,18 @@
        Target="/config"
        Default="/mnt/user/appdata/sabnzbd"
        Mode="rw"
-       Description="This is where SAB will store it's databases and configuration."
+       Description="Host path to store SAB's databases and configuration."
        Display="always"
        Required="true">/mnt/user/appdata/sabnzbd</Config>
+  <Config
+       Type="Path"
+       Name="User shares"
+       Target="/mnt/user"
+       Default="/mnt/user"
+       Mode="rw"
+       Description="unRAID's path to user shares with cache."
+       Display="always"
+       Required="true">/mnt/user/</Config>
   <Config
        Type="Variable"
        Name="Run as specified user"
