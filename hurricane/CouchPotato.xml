@@ -11,7 +11,7 @@
   </Overview>
   <Registry>https://hub.docker.com/r/mttddd/mttdddcouchpotato</Registry>
   <GitHub>https://github.com/mttddd/CouchPotatoServer</GitHub>
-  <Repository>mttddd/couchpotatoserver</Repository>
+  <Repository>mttddd/mttdddcouchpotato</Repository>
   <Support>http://lime-technology.com/forum/index.php?topic=39286</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
